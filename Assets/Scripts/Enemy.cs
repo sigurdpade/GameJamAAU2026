@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     private Transform moveTarget;
     private int pathIndex = 0;
 
+    public GameObject deathParticle;
+
     private void Start()
     {
         moveTarget = GameManager.main.path[pathIndex];
@@ -38,9 +40,9 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("DONT CHAT TO ME!");
             GameObject.Find("GameManager").GetComponent<TowerBuilder>().money += killReward;
             GameObject.Find("GameManager").GetComponent<TowerBuilder>().UpdateUI();
+            Instantiate(deathParticle, transform.position, transform.rotation);
             Destroy(gameObject);
             return;
         }

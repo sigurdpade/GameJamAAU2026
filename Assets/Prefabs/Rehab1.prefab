@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerBehavior
   projectilePrefab: {fileID: 3009681234406699702, guid: 60da6ef823bf1a244bce24a3614a6178, type: 3}
   firePoint: {fileID: 9095579292887599489}
-  fireRate: 4
+  fireRate: 0.5
   useBurst: 0
   burstCount: 3
   burstDelay: 0.2

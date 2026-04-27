@@ -21,11 +21,8 @@ public class TouchClickManager : MonoBehaviour
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
 
-        Debug.Log("ScreenPos: " + screenPos);
-
         if (hit.collider != null)
         {
-            Debug.Log("Clicked: " + hit.collider.name);
             hit.collider.GetComponent<ClickableObject>()?.OnClicked();
         }
     }

@@ -107,9 +107,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 10
-  damage: 50
+  damage: 25
   target: {fileID: 0}
   hitSound: {fileID: 0}
+  hitParticle: {fileID: 3159535571779276687, guid: 94340abb9bbebe747b7f518dc8892932, type: 3}
 --- !u!50 &-2563184682253779054
 Rigidbody2D:
   serializedVersion: 5

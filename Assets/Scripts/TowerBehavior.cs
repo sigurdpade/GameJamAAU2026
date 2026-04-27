@@ -26,7 +26,6 @@ public class TowerBehavior : MonoBehaviour
     public void OnTriggerStay2D(Collider2D other)
     {
         inRange = true;
-        Debug.Log("Enemy in range!");
     }
 
     public void OnTriggerExit2D(Collider2D other)

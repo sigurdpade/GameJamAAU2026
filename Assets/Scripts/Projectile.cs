@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     public Transform target;
     public AudioClip hitSound;
 
+    public GameObject hitParticle;
+
     private void Start()
     {
         target = FindNearestEnemy().transform;
@@ -16,6 +18,9 @@ public class Projectile : MonoBehaviour
     public GameObject FindNearestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (enemies.Length == 0)
+            Destroy(gameObject);
 
         GameObject nearestEnemy = null;
         float shortestDistance = Mathf.Infinity;
@@ -66,7 +71,7 @@ public class Projectile : MonoBehaviour
 
                 //SoundManager.instance.PlaySFX(hitSound, true);
 
-                Debug.Log("Hej");
+                Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
                 Destroy(gameObject);
             }
         }
