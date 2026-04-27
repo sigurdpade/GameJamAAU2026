@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class GameManagerScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static GameManagerScript main;
+    public static GameManager main;
 
     public Transform startPoint;
     public Transform[] path;
