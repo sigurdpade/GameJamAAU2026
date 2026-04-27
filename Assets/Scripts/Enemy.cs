@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
     public int health = 100;
+    public bool isImmune = false;
     private Transform moveTarget;
     private int pathIndex = 0;
 
