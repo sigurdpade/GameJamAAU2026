@@ -12383,7 +12383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e14319c05056845a7e7e059bf533d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBuilder
-  money: 500
+  money: 50
   moneyText: {fileID: 633045239}
 --- !u!4 &2065349851
 Transform:
