@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,14 @@ public class TowerBuilder : MonoBehaviour
     private GameObject selectedPlot;
 
     public int money;
+
+    [Header("UI Elements...")]
+    public TMP_Text moneyText;
+
+    private void Start()
+    {
+        UpdateUI();
+    }
 
     public void SelectTower(GameObject tower)
     {
@@ -25,6 +34,11 @@ public class TowerBuilder : MonoBehaviour
 
     public void SelectPlot(GameObject plot)
     {
+        if (selectedPlot != null)
+        {
+            selectedPlot.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
         selectedPlot = plot;
         selectedPlot.GetComponent<SpriteRenderer>().color = Color.red;
         //effects to see selection
@@ -53,5 +67,11 @@ public class TowerBuilder : MonoBehaviour
         selectedPlot = null;
         //do de-select effects
 
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        moneyText.text = "$" + money;
     }
 }

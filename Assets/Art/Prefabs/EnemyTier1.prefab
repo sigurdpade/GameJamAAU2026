@@ -146,7 +146,7 @@ MonoBehaviour:
   speed: 1
   enemyType: {fileID: 5786451422871810934}
   health: 50
-  isImmune: 0
+  isImmune: 1
 --- !u!50 &2720868687986032504
 Rigidbody2D:
   serializedVersion: 5
