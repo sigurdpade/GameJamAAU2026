@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4803605098217757892}
   - component: {fileID: 2720868687986032504}
   m_Layer: 0
-  m_Name: EnemyTier1
+  m_Name: SPEED
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 673769266542226484, guid: 47b7678f51aaf364da696b76a6768024, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3fc6aa1573707a42a02bd417cafdd83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 2720868687986032504}
-  speed: 1
+  speed: 4
   enemyType: {fileID: 5786451422871810934}
-  health: 50
-  isImmune: 1
+  health: 70
+  isImmune: 0
 --- !u!50 &2720868687986032504
 Rigidbody2D:
   serializedVersion: 5
