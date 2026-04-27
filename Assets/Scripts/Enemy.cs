@@ -8,8 +8,8 @@ public class EnemyMovement : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
-    [SerializeField] private int health = 100;
-
+    public int health = 100;
+    public bool isImmune = false;
     private Transform moveTarget;
     private int pathIndex = 0;
 
@@ -31,7 +31,6 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 moveTarget = GameManager.main.path[pathIndex];
-                health -= 25;
             }
 
         }
