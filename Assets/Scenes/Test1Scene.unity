@@ -1517,6 +1517,7 @@ GameObject:
   - component: {fileID: 455187512}
   - component: {fileID: 455187511}
   - component: {fileID: 455187510}
+  - component: {fileID: 455187513}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1589,7 +1590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 455187511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2065349850}
+        m_TargetAssemblyTypeName: TowerBuilder, Assembly-CSharp
+        m_MethodName: SelectTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 455187508}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &455187511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,6 +1641,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455187508}
   m_CullTransparentMesh: 1
+--- !u!114 &455187513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455187508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d23935735c8e254d98e4a6fe3910f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerHolder
+  tower: {fileID: 11400000, guid: 26266f4134c44de46a8d8ccf18c133b0, type: 2}
 --- !u!1 &482873251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
@@ -2417,6 +2443,7 @@ GameObject:
   - component: {fileID: 638195094}
   - component: {fileID: 638195093}
   - component: {fileID: 638195092}
+  - component: {fileID: 638195095}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -2489,7 +2516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 638195093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2065349850}
+        m_TargetAssemblyTypeName: TowerBuilder, Assembly-CSharp
+        m_MethodName: SelectTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &638195093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,6 +2567,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638195090}
   m_CullTransparentMesh: 1
+--- !u!114 &638195095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638195090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d23935735c8e254d98e4a6fe3910f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerHolder
+  tower: {fileID: 0}
 --- !u!1001 &720751770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3434,7 +3486,7 @@ Transform:
   m_GameObject: {fileID: 974967200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalPosition: {x: 0, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5878,7 +5930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e14319c05056845a7e7e059bf533d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBuilder
-  money: 50
+  money: 500
   moneyText: {fileID: 633045239}
 --- !u!4 &2065349851
 Transform:
@@ -5982,8 +6034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5cab0f6dee10e448f83fe4c70f1f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 20
-  maxHealth: 20
+  health: 10
+  maxHealth: 10
   healthbar: {fileID: 16007359}
 --- !u!114 &2065349855
 MonoBehaviour:
@@ -6234,6 +6286,7 @@ GameObject:
   - component: {fileID: 2141546806}
   - component: {fileID: 2141546805}
   - component: {fileID: 2141546804}
+  - component: {fileID: 2141546807}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -6306,7 +6359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2141546805}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2065349850}
+        m_TargetAssemblyTypeName: TowerBuilder, Assembly-CSharp
+        m_MethodName: SelectTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2141546802}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2141546805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6345,6 +6410,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141546802}
   m_CullTransparentMesh: 1
+--- !u!114 &2141546807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141546802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d23935735c8e254d98e4a6fe3910f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerHolder
+  tower: {fileID: 11400000, guid: 69f1b379c299c3848802bea660dd9432, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

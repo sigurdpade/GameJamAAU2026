@@ -38,9 +38,10 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Debug.Log("DONT CHAT TO ME!");
+            GameObject.Find("GameManager").GetComponent<TowerBuilder>().money += killReward;
+            GameObject.Find("GameManager").GetComponent<TowerBuilder>().UpdateUI();
             Destroy(gameObject);
-            GetComponent<TowerBuilder>().money += killReward;
-            GetComponent<TowerBuilder>().UpdateUI();
             return;
         }
     }
