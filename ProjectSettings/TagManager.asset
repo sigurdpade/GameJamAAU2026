@@ -9,6 +9,7 @@ TagManager:
   - Tier3
   - Tier4
   - Boss
+  - Enemy
   layers:
   - Default
   - TransparentFX

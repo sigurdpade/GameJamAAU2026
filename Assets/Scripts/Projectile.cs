@@ -3,10 +3,36 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 1;
+    public int damage = 25;
 
     public Transform target;
     public AudioClip hitSound;
+
+    private void Start()
+    {
+        target = FindNearestEnemy().transform;
+    }
+
+    public GameObject FindNearestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        GameObject nearestEnemy = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector2.Distance(transform.position, enemy.transform.position);
+
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                nearestEnemy = enemy;
+            }
+        }
+
+        return nearestEnemy;
+    }
 
     void Update()
     {
@@ -19,16 +45,33 @@ public class Projectile : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
-        if (dir.magnitude <= distanceThisFrame)
+        /*if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
             return;
-        }
+        }*/
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget()
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") == true)
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                enemy.health -= damage;
+
+                //SoundManager.instance.PlaySFX(hitSound, true);
+
+                Debug.Log("Hej");
+                Destroy(gameObject);
+            }
+        }
+    }
+    /*void HitTarget()
     {
         Enemy enemy = target.GetComponent<Enemy>();
 
@@ -41,7 +84,7 @@ public class Projectile : MonoBehaviour
 
         Destroy(gameObject);
 
-    }
+    }*/
 
     public void SetTarget(Transform _target)
     {

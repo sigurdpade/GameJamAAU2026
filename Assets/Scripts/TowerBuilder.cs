@@ -39,17 +39,19 @@ public class TowerBuilder : MonoBehaviour
         if (selectedTowerScriptable.cost > money)
             return;
 
+        money -= selectedTowerScriptable.cost;
+        
         //build the tower at the plot
-        Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform);
+        Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform.position, selectedPlot.transform.rotation);
 
         selectedTower.GetComponent<Image>().color = Color.white;
         selectedTower = null;
         selectedTowerScriptable = null;
 
         selectedPlot.GetComponent<SpriteRenderer>().color = Color.white;
+        selectedPlot.SetActive(false);
         selectedPlot = null;
         //do de-select effects
 
-        money -= selectedTowerScriptable.cost;
     }
 }

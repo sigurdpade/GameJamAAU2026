@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9095579292887599489}
   - component: {fileID: 7502516720872779004}
+  - component: {fileID: 744128557963674350}
   m_Layer: 0
   m_Name: Printer1
   m_TagString: Untagged
@@ -91,3 +92,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &744128557963674350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080224513412701615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852b4c72411c08c46b58445f1432f8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerBehavior
+  projectilePrefab: {fileID: 3009681234406699702, guid: cfae7814cc4af7b4bb2c7c59a1e8a310, type: 3}
+  firePoint: {fileID: 9095579292887599489}
+  fireRate: 1
+  useBurst: 0
+  burstCount: 3
+  burstDelay: 0.2
