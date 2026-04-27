@@ -15,15 +15,34 @@ public class TowerBehavior : MonoBehaviour
     public int burstCount = 3;
     public float burstDelay = 0.2f;
 
+    private bool inRange = false;
+
     private void Start()
     {
         StartCoroutine(ShootingLoop());
     }
 
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        inRange = true;
+        Debug.Log("Enemy in range!");
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        inRange = false;
+    }
+
     IEnumerator ShootingLoop()
     {
         while (true)
-        {
+        {   
+            if (!inRange)
+            {
+                yield return null;
+                continue;
+            }
             if (useBurst)
             {
                 yield return StartCoroutine(FireBurst());
