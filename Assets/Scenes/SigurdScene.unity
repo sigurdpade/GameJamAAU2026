@@ -3047,25 +3047,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e65b7971d8d07469a507d68ec2bd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  eligibleEnemiesLevel1:
-  - {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
-  eligibleEnemiesLevel2:
-  - {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
-  - {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
-  eligibleEnemiesLevel3:
-  - {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
-  - {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
-  - {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
-  eligibleEnemiesLevel4:
-  - {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
-  - {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
-  - {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
-  - {fileID: 5786451422871810934, guid: ba7b9a02aaa129d48bcadcddae689549, type: 3}
-  spawnIntervalLevel1: 2
-  spawnIntervalLevel2: 1.5
-  spawnIntervalLevel3: 1
-  spawnIntervalLevel4: 0.5
-  level: 1
+  levels:
+  - spawnInterval: 2
+    enemies:
+    - prefab: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      weight: 1
+  - spawnInterval: 1.5
+    enemies:
+    - prefab: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      weight: 75
+    - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
+      weight: 25
+  - spawnInterval: 1
+    enemies:
+    - prefab: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      weight: 50
+    - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
+      weight: 40
+    - prefab: {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
+      weight: 10
+  - spawnInterval: 0.5
+    enemies:
+    - prefab: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      weight: 50
+    - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
+      weight: 25
+    - prefab: {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
+      weight: 15
+    - prefab: {fileID: 5786451422871810934, guid: ba7b9a02aaa129d48bcadcddae689549, type: 3}
+      weight: 10
+  level: 0
+  levelDuration: 10
 --- !u!1001 &1780731457
 PrefabInstance:
   m_ObjectHideFlags: 0

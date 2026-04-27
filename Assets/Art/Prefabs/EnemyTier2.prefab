@@ -145,6 +145,7 @@ MonoBehaviour:
   rb: {fileID: 2720868687986032504}
   speed: 2
   enemyType: {fileID: 5786451422871810934}
+  health: 75
 --- !u!50 &2720868687986032504
 Rigidbody2D:
   serializedVersion: 5

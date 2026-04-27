@@ -8,8 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
-    [SerializeField] private int health = 100;
-
+    public int health = 100;
     private Transform moveTarget;
     private int pathIndex = 0;
 
