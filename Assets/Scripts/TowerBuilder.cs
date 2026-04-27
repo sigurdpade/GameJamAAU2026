@@ -16,6 +16,11 @@ public class TowerBuilder : MonoBehaviour
         selectedTowerScriptable = selectedTower.GetComponent<TowerHolder>().tower;
         selectedTower.GetComponent<Image>().color = Color.red;
         //effects to see selection
+
+        if (selectedPlot != null)
+        {
+            BuildTower();
+        }
     }
 
     public void SelectPlot(GameObject plot)
@@ -35,7 +40,7 @@ public class TowerBuilder : MonoBehaviour
             return;
 
         //build the tower at the plot
-        Instantiate(selectedTower, selectedPlot.transform);
+        Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform);
 
         selectedTower.GetComponent<Image>().color = Color.white;
         selectedTower = null;

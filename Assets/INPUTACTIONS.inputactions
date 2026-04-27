@@ -1,0 +1,66 @@
+{
+    "version": 1,
+    "name": "INPUTACTIONS",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "2d61dfe6-5388-4f29-8bec-c0550247574c",
+            "actions": [
+                {
+                    "name": "Tap",
+                    "type": "PassThrough",
+                    "id": "3238d58b-6446-41dc-8696-2ecbb29462f6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "a1a2f4cd-07ae-4d2b-b310-822dc68cb780",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ed07a90e-00fa-46f6-b20d-5e1e8e8c5c48",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4788d334-7076-4af5-a305-9facefc403cf",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3eaec141-4308-44df-9a1e-afa911e66742",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

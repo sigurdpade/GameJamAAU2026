@@ -1,30 +1,33 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI; 
+using UnityEngine.InputSystem;
 
 public class TouchClickManager : MonoBehaviour
 {
-    void Update()
+    private Vector2 lastPointerPosition;
+
+    public void OnPosition(InputAction.CallbackContext context)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            HandleClick(Input.mousePosition);
-        }
+        lastPointerPosition = context.ReadValue<Vector2>();
+    }
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            HandleClick(Input.GetTouch(0).position);
-        }
+    public void OnTap(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
 
-        void HandleClick(Vector2 screenPos)
-        {
-            Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
-            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+        HandleClick(lastPointerPosition);
+    }
 
-            if (hit.collider != null)
-            {
-                hit.collider.GetComponent<ClickableObject>()?.OnClicked();
-            }
+    void HandleClick(Vector2 screenPos)
+    {
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
+        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
+
+        Debug.Log("ScreenPos: " + screenPos);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Clicked: " + hit.collider.name);
+            hit.collider.GetComponent<ClickableObject>()?.OnClicked();
         }
     }
 }
