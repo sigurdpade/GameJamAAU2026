@@ -7,6 +7,9 @@ public class Health : MonoBehaviour
 
     public Healthbar healthbar;
 
+    public Transform playerParticlePoint;
+    public GameObject playerHitParticles;
+
     private void Start()
     {
         healthbar.DrawHearts();
@@ -16,6 +19,8 @@ public class Health : MonoBehaviour
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
+
+        Instantiate(playerHitParticles, playerParticlePoint.transform.position, playerParticlePoint.transform.rotation);
 
         healthbar.DrawHearts();
     }

@@ -71,6 +71,7 @@ public class Projectile : MonoBehaviour
 
                 //SoundManager.instance.PlaySFX(hitSound, true);
 
+                enemy.FlashRed();
                 Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
                 Destroy(gameObject);
             }

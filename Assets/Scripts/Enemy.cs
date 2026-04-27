@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,11 +15,19 @@ public class Enemy : MonoBehaviour
     private Transform moveTarget;
     private int pathIndex = 0;
 
+    [Header("Effects")]
     public GameObject deathParticle;
+    public GameObject moneyParticle;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+    public float flashDuration = 0.1f;
 
     private void Start()
     {
         moveTarget = GameManager.main.path[pathIndex];
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     private void Update()
@@ -29,6 +38,7 @@ public class Enemy : MonoBehaviour
             if (pathIndex >= GameManager.main.path.Length)
             {
                 Destroy(gameObject);
+                GameObject.Find("GameManager").GetComponent<Health>().TakeDamage(1);
                 return;
             }
             else
@@ -43,6 +53,8 @@ public class Enemy : MonoBehaviour
             GameObject.Find("GameManager").GetComponent<TowerBuilder>().money += killReward;
             GameObject.Find("GameManager").GetComponent<TowerBuilder>().UpdateUI();
             Instantiate(deathParticle, transform.position, transform.rotation);
+            Transform playerParticlesPoint = GameObject.Find("PlayerParticlesPoint").transform;
+            Instantiate(moneyParticle, playerParticlesPoint.transform.position, playerParticlesPoint.transform.rotation);
             Destroy(gameObject);
             return;
         }
@@ -52,5 +64,19 @@ public class Enemy : MonoBehaviour
     {
         Vector2 direction = (moveTarget.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
+    }
+
+    public void FlashRed()
+    {
+        StartCoroutine(FlashRoutine());
+    }
+
+    IEnumerator FlashRoutine()
+    {
+        spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(flashDuration);
+
+        spriteRenderer.color = originalColor;
     }
 }

@@ -182,6 +182,8 @@ MonoBehaviour:
   health: 75
   isImmune: 0
   deathParticle: {fileID: 4667045805532871220, guid: b7327fdd343670040aa642a917d1a49b, type: 3}
+  moneyParticle: {fileID: 2501569724640446890, guid: cf1716ab3d7b1c145a1a82d7a9d09da1, type: 3}
+  flashDuration: 0.1
 --- !u!50 &2720868687986032504
 Rigidbody2D:
   serializedVersion: 5
