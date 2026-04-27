@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        moveTarget = GameManagerScript.main.path[pathIndex];
+        moveTarget = GameManager.main.path[pathIndex];
     }
 
     private void Update()
@@ -22,14 +22,14 @@ public class EnemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, moveTarget.position) < 0.1f)
         {
             pathIndex++;
-            if (pathIndex >= GameManagerScript.main.path.Length)
+            if (pathIndex >= GameManager.main.path.Length)
             {
                 Destroy(gameObject);
                 return;
             }
             else
             {
-                moveTarget = GameManagerScript.main.path[pathIndex];
+                moveTarget = GameManager.main.path[pathIndex];
             }
 
         }
