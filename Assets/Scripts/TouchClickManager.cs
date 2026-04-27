@@ -12,9 +12,8 @@ public class TouchClickManager : MonoBehaviour
 
     public void OnTap(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-
-        HandleClick(lastPointerPosition);
+        if (context.performed)
+            HandleClick(lastPointerPosition);
     }
 
     void HandleClick(Vector2 screenPos)
