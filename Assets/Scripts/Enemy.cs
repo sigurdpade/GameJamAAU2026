@@ -30,7 +30,6 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 moveTarget = GameManager.main.path[pathIndex];
-                health -= 25;
             }
 
         }
