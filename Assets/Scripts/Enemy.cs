@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
+    public int killReward = 10;
     public int health = 100;
     public bool isImmune = false;
     private Transform moveTarget;
@@ -38,6 +39,8 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            GetComponent<TowerBuilder>().money += killReward;
+            GetComponent<TowerBuilder>().UpdateUI();
             return;
         }
     }
