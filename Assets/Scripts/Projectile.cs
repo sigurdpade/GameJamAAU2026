@@ -61,18 +61,23 @@ public class Projectile : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") == true)
+        if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
 
             if (enemy != null)
             {
-                enemy.health -= damage;
+                // Only allow damage if enemy is not immune OR this projectile is ProjectileHR
+                if (!enemy.isImmune || gameObject.name.Contains("ProjectileHR"))
+                {
+                    enemy.health -= damage;
 
-                SoundManager.instance.PlaySFX(hitSound, true);
+                    SoundManager.instance.PlaySFX(hitSound, true);
 
-                enemy.FlashRed();
-                Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
+                    enemy.FlashRed();
+                    Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
+                }
+
                 Destroy(gameObject);
             }
         }

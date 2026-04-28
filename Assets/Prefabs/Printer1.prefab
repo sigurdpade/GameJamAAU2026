@@ -109,8 +109,8 @@ MonoBehaviour:
   firePoint: {fileID: 9095579292887599489}
   fireRate: 1
   useBurst: 0
-  burstCount: 3
-  burstDelay: 0.2
+  burstCount: 2
+  burstDelay: 0.3
 --- !u!58 &3222927110250997439
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -107,10 +107,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerBehavior
   projectilePrefab: {fileID: 3009681234406699702, guid: a42b3eb34ba74504495d89b9e914d833, type: 3}
   firePoint: {fileID: 9095579292887599489}
-  fireRate: 1
+  fireRate: 2
   useBurst: 1
   burstCount: 3
-  burstDelay: 0.5
+  burstDelay: 1
 --- !u!58 &-6861824440254407639
 CircleCollider2D:
   m_ObjectHideFlags: 0
