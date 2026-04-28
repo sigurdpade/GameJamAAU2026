@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -13,25 +15,82 @@ public class EnemySpawner : MonoBehaviour
     public class Level
     {
         public float spawnInterval = 2f;
+        public float spawnDuration = 10f;
         public Enemy[] enemies;
+
+        public AudioClip music;
     }
 
     [Header("Levels")]
     [SerializeField] private Level[] levels;
 
-    [Header("Progression")]
-    [SerializeField] private int level = 0;
-    [SerializeField] private float levelDuration = 10f;
+    [Header("UI")]
+    [SerializeField] private GameObject levelTextPanel;
+    [SerializeField] private TMP_Text levelText;
+    [SerializeField] private float breakDuration = 3f;
 
+    [SerializeField] private int level = 0;
     private float spawnCounter;
-    private float levelTimer;
+    private bool isSpawning = false;
+
+    public AudioClip changeLevelSFX;
 
     void Start()
     {
-        spawnCounter = levels[level].spawnInterval;
+        //spawnCounter = levels[level].spawnInterval;
+        StartCoroutine(LevelLoop());
     }
 
-    void Update()
+    IEnumerator LevelLoop()
+    {
+        while (level < levels.Length)
+        {
+            PlayMusic(levels[level].music);
+
+            yield return StartCoroutine(ShowLevelText("Level " + (level + 1)));
+            SoundManager.instance.PlayImportantSFX(changeLevelSFX);
+
+            isSpawning = true;
+            spawnCounter = levels[level].spawnInterval;
+
+            float timer = 0f;
+
+            while (timer < levels[level].spawnDuration)
+            {
+                timer += Time.deltaTime;
+
+                spawnCounter -= Time.deltaTime;
+                if (spawnCounter <= 0f)
+                {
+                    SpawnEnemy();
+                    spawnCounter = levels[level].spawnInterval;
+                }
+
+                yield return null;
+            }
+
+            isSpawning = false;
+
+            yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
+
+            yield return StartCoroutine(ShowLevelText("Next Wave Incoming"));
+
+            level++;
+        }
+
+        Debug.Log("All levels complete!");
+    }
+
+    private IEnumerator ShowLevelText(string message)
+    {
+        levelTextPanel.SetActive(true);
+        levelText.text = message;
+        yield return new WaitForSeconds(breakDuration);
+
+        levelTextPanel.SetActive(false);
+    }
+
+    /*void Update()
     {
         levelTimer += Time.deltaTime;
         spawnCounter -= Time.deltaTime;
@@ -47,7 +106,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             spawnCounter = levels[level].spawnInterval;
         }
-    }
+    }*/
 
     private void SpawnEnemy()
     {
@@ -77,5 +136,10 @@ public class EnemySpawner : MonoBehaviour
         }
 
         return enemies[enemies.Length - 1].prefab;
+    }
+
+    private void PlayMusic(AudioClip clip)
+    {
+        SoundManager.instance.PlayMusic(clip);
     }
 }

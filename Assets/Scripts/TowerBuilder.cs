@@ -13,6 +13,7 @@ public class TowerBuilder : MonoBehaviour
 
     [Header("UI Elements...")]
     public TMP_Text moneyText;
+    public AudioClip placeBuildingSFX;
 
     private void Start()
     {
@@ -65,6 +66,7 @@ public class TowerBuilder : MonoBehaviour
         
         //build the tower at the plot
         Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform.position, selectedPlot.transform.rotation);
+        SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
 
         selectedTower.GetComponent<Image>().color = Color.white;
         selectedTower = null;

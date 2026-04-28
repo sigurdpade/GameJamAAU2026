@@ -69,7 +69,7 @@ public class Projectile : MonoBehaviour
             {
                 enemy.health -= damage;
 
-                //SoundManager.instance.PlaySFX(hitSound, true);
+                SoundManager.instance.PlaySFX(hitSound, true);
 
                 enemy.FlashRed();
                 Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
