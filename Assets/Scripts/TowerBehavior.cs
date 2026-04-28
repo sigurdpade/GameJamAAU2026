@@ -3,6 +3,9 @@ using System.Collections;
 
 public class TowerBehavior : MonoBehaviour
 {
+    public int towerType = 1; //1 = printer, 2 = judge, 3 = rehab
+    public int towerTier = 1; //1 = mundane, 2 = gold, 3 = diamond
+
     [Header("Shooting")]
     public GameObject projectilePrefab;
     public Transform firePoint;

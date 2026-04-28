@@ -38,8 +38,6 @@ public class LearningPopUp : MonoBehaviour
 
     public void TryShowInfo(LearningInformation info, string buildingId)
     {
-        Debug.Log("Slay");
-
         if (builtBuildings.Contains(buildingId))
             return;
 

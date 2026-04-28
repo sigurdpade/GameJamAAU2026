@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
-  towerBehavior: {fileID: 0}
+  towerBehavior: {fileID: 744128557963674350}
 --- !u!1 &4782190078477879298
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852b4c72411c08c46b58445f1432f8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBehavior
+  towerType: 2
+  towerTier: 2
   projectilePrefab: {fileID: 3009681234406699702, guid: a42b3eb34ba74504495d89b9e914d833, type: 3}
   firePoint: {fileID: 9095579292887599489}
   fireRate: 1

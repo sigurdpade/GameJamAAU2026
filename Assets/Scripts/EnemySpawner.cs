@@ -45,7 +45,8 @@ public class EnemySpawner : MonoBehaviour
     {
         while (level < levels.Length)
         {
-            PlayMusic(levels[level].music);
+            if (levels[level].music != null)
+                PlayMusic(levels[level].music);
 
             SoundManager.instance.PlayImportantSFX(changeLevelSFX);
             yield return StartCoroutine(ShowLevelText("Level " + (level + 1)));

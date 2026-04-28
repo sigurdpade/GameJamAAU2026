@@ -11,12 +11,15 @@ public class TowerBuilder : MonoBehaviour
 
     public int money;
 
+    private TouchClickManager tcm;
+
     [Header("UI Elements...")]
     public TMP_Text moneyText;
     public AudioClip placeBuildingSFX;
 
     private void Start()
     {
+        tcm = GameObject.Find("GameManager").GetComponent<TouchClickManager>();
         UpdateUI();
     }
 
@@ -29,7 +32,7 @@ public class TowerBuilder : MonoBehaviour
 
         if (selectedPlot != null)
         {
-            BuildTower();
+            BuildTower(selectedTower);
         }
     }
 
@@ -45,12 +48,52 @@ public class TowerBuilder : MonoBehaviour
         //effects to see selection
         if(selectedTower != null)
         {
-            BuildTower();
+            BuildTower(selectedTower);
         }
     }
 
-    public void BuildTower()
+    public void DeselectPlot ()
     {
+        if (selectedPlot != null)
+        {
+            selectedPlot.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
+    public void BuildTower(GameObject tower)
+    {
+        if (tcm.selectedTower != null)
+        {
+            selectedTower = tower;
+            selectedTowerScriptable = selectedTower.GetComponent<TowerHolder>().tower;
+
+            if (selectedTowerScriptable.cost > money)
+            {
+                selectedTower.GetComponent<Image>().color = Color.white;
+                selectedTower = null;
+                selectedTowerScriptable = null;
+                return;
+            }
+
+            money -= selectedTowerScriptable.cost;
+
+            if (tcm.selectedTower.GetComponent<TowerBehavior>().towerTier == 1)
+                Instantiate(selectedTowerScriptable.towerObject2, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+            if (tcm.selectedTower.GetComponent<TowerBehavior>().towerTier == 2)
+                Instantiate(selectedTowerScriptable.towerObject3, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+
+            SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
+            selectedTower.GetComponent<Image>().color = Color.white;
+            selectedTower = null;
+            selectedTowerScriptable = null;
+            Destroy(tcm.selectedTower);
+
+            tcm.selectedTower = null;
+            tcm.ShowBuyMenu();
+            UpdateUI();
+            return;
+        }
+
         if (selectedTowerScriptable.cost > money)
         {
             selectedTower.GetComponent<Image>().color = Color.white;
@@ -65,7 +108,7 @@ public class TowerBuilder : MonoBehaviour
         money -= selectedTowerScriptable.cost;
         
         //build the tower at the plot
-        Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform.position, selectedPlot.transform.rotation);
+        Instantiate(selectedTowerScriptable.towerObject1, selectedPlot.transform.position, selectedPlot.transform.rotation);
         SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
         LearningPopUp.instance.TryShowInfo(selectedTowerScriptable.learningInformation, selectedTowerScriptable.name);
 

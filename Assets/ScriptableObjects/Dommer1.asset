@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   towerName: Judge
   towerSprite: {fileID: 21300000, guid: c6359a555da12cf46af7be156a137ed0, type: 3}
-  towerObject: {fileID: 5080224513412701615, guid: de1cb92ead609ad4bb9e4ef827641cf2, type: 3}
+  towerObject1: {fileID: 5080224513412701615, guid: de1cb92ead609ad4bb9e4ef827641cf2, type: 3}
+  towerObject2: {fileID: 5080224513412701615, guid: f87dca638d02a294295f051035abc179, type: 3}
+  towerObject3: {fileID: 5080224513412701615, guid: 91fd0b6d574acb64fb131fc0aa295858, type: 3}
   cost: 100
   learningInformation:
     name: Judge

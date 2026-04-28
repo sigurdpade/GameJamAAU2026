@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   towerName: HR
   towerSprite: {fileID: 21300000, guid: 9ada8d1ec4a715241ad3d210bc410bf8, type: 3}
-  towerObject: {fileID: 5080224513412701615, guid: 7bcdd54ad025b4340a0206b0fdffda6a, type: 3}
+  towerObject1: {fileID: 5080224513412701615, guid: 7bcdd54ad025b4340a0206b0fdffda6a, type: 3}
+  towerObject2: {fileID: 5080224513412701615, guid: 9a027d190eb0ee4428e650d5485644b7, type: 3}
+  towerObject3: {fileID: 5080224513412701615, guid: c944cc44856f79647a7e93ef9c2d2281, type: 3}
   cost: 150
   learningInformation:
     name: HR
