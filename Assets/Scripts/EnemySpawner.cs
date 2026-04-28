@@ -47,8 +47,8 @@ public class EnemySpawner : MonoBehaviour
         {
             PlayMusic(levels[level].music);
 
-            yield return StartCoroutine(ShowLevelText("Level " + (level + 1)));
             SoundManager.instance.PlayImportantSFX(changeLevelSFX);
+            yield return StartCoroutine(ShowLevelText("Level " + (level + 1)));
 
             isSpawning = true;
             spawnCounter = levels[level].spawnInterval;
