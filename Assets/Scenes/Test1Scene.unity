@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -536,6 +540,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -954,6 +962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1078,6 +1090,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -1317,6 +1333,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -1871,6 +1891,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -2937,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3035,6 +3063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3132,6 +3164,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -4360,6 +4396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4756,6 +4796,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -5487,6 +5531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5615,6 +5663,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -6074,6 +6126,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -6557,6 +6613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6878,6 +6938,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -8528,6 +8592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8709,6 +8777,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -8931,6 +9003,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -10554,6 +10630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10964,6 +11044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11061,6 +11145,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -11250,6 +11338,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
@@ -12262,6 +12354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plot (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12412,6 +12508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae88eaa13c7ef0f41b8cbf72309fb632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TouchClickManager
+  clickableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &2065349853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12467,7 +12566,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: a1a2f4cd-07ae-4d2b-b310-822dc68cb780
+    m_ActionId: 47113620-aef9-4a4e-b060-6b33be9ab512
     m_ActionName: 'Gameplay/Position[/Mouse/position,/Pen/position,/Device Simulator
       Touchscreen/position]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -12926,6 +13025,10 @@ PrefabInstance:
     - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Name
       value: Plot (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407701165177898839, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6584804029426103268, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
       propertyPath: m_Sprite

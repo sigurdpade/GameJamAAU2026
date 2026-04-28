@@ -51,7 +51,15 @@ public class TowerBuilder : MonoBehaviour
     public void BuildTower()
     {
         if (selectedTowerScriptable.cost > money)
+        {
+            selectedTower.GetComponent<Image>().color = Color.white;
+            selectedTower = null;
+            selectedTowerScriptable = null;
+
+            selectedPlot.GetComponent<SpriteRenderer>().color = Color.white;
+            selectedPlot = null;
             return;
+        }
 
         money -= selectedTowerScriptable.cost;
         

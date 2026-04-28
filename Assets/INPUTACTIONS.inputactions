@@ -18,7 +18,7 @@
                 {
                     "name": "Position",
                     "type": "Value",
-                    "id": "a1a2f4cd-07ae-4d2b-b310-822dc68cb780",
+                    "id": "47113620-aef9-4a4e-b060-6b33be9ab512",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -39,18 +39,7 @@
                 },
                 {
                     "name": "",
-                    "id": "4788d334-7076-4af5-a305-9facefc403cf",
-                    "path": "<Pointer>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Tap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3eaec141-4308-44df-9a1e-afa911e66742",
+                    "id": "c8e69bc7-c58e-401d-b66e-dbbdb28a8b30",
                     "path": "<Pointer>/position",
                     "interactions": "",
                     "processors": "",
