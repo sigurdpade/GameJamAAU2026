@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &109736321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,6 +1694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &380992322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,6 +3053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1001 &509215299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3153,6 +3156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1001 &513812704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3255,6 +3259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &601071821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,6 +4549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &735739639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,6 +5189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &908474439
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,6 +5686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &955720475
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,6 +6283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1014762272
 GameObject:
   m_ObjectHideFlags: 0
@@ -6760,6 +6770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1072756938
 GameObject:
   m_ObjectHideFlags: 0
@@ -6869,6 +6880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1109712133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,6 +9030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1482474319
 GameObject:
   m_ObjectHideFlags: 0
@@ -9584,6 +9597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1559887868
 GameObject:
   m_ObjectHideFlags: 0
@@ -9728,6 +9742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1589358287
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,6 +9943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1605891483
 GameObject:
   m_ObjectHideFlags: 0
@@ -11425,6 +11441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1825556317
 GameObject:
   m_ObjectHideFlags: 0
@@ -11839,6 +11856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1001 &1882385645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11941,6 +11959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1882521546
 GameObject:
   m_ObjectHideFlags: 0
@@ -12139,6 +12158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &1945942745
 GameObject:
   m_ObjectHideFlags: 0
@@ -12859,6 +12879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &2039732984
 GameObject:
   m_ObjectHideFlags: 0
@@ -13364,6 +13385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &2065349849
 GameObject:
   m_ObjectHideFlags: 0
@@ -13433,6 +13455,8 @@ MonoBehaviour:
   clickableLayer:
     serializedVersion: 2
     m_Bits: 64
+  selectedTower: {fileID: 0}
+  tapSound: {fileID: 8300000, guid: 0fcc8ca156dfa584c9276161bab461ed, type: 3}
 --- !u!114 &2065349853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13636,6 +13660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &2113043028
 GameObject:
   m_ObjectHideFlags: 0
@@ -13962,6 +13987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1001 &2133917921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14064,6 +14090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
+  towerBehavior: {fileID: 0}
 --- !u!1 &2138065706
 GameObject:
   m_ObjectHideFlags: 0

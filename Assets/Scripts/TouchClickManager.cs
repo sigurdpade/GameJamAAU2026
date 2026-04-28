@@ -6,6 +6,7 @@ public class TouchClickManager : MonoBehaviour
     private Vector2 lastPointerPosition;
     public LayerMask clickableLayer;
     public GameObject selectedTower;
+    public AudioClip tapSound;
 
     public void OnPosition(InputAction.CallbackContext context)
     {
@@ -20,6 +21,8 @@ public class TouchClickManager : MonoBehaviour
 
     void HandleClick(Vector2 screenPos)
     {
+        SoundManager.instance.PlaySFX(tapSound);
+
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, Mathf.Infinity, clickableLayer);
 
