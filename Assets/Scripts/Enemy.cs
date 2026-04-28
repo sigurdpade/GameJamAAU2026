@@ -5,8 +5,9 @@ public class Enemy : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
-    
+
     [Header("Attributes")]
+    public string enemyId;
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
     public int killReward = 10;
@@ -21,6 +22,11 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     public float flashDuration = 0.1f;
+    public AudioClip enemyDeathSound;
+    public AudioClip damagePlayerSound;
+
+    [Header("Learning Information...")]
+    public LearningInformation learningInformation;
 
     private void Start()
     {
@@ -28,6 +34,8 @@ public class Enemy : MonoBehaviour
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+
+        //FindObjectOfType<LearningPopUp>().TryShowInfo(learningInformation, enemyId);
     }
 
     private void Update()
@@ -37,8 +45,9 @@ public class Enemy : MonoBehaviour
             pathIndex++;
             if (pathIndex >= GameManager.main.path.Length)
             {
-                Destroy(gameObject);
                 GameObject.Find("GameManager").GetComponent<Health>().TakeDamage(1);
+                SoundManager.instance.PlaySFX(damagePlayerSound);
+                Destroy(gameObject);
                 return;
             }
             else

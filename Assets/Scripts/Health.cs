@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -23,5 +24,11 @@ public class Health : MonoBehaviour
         Instantiate(playerHitParticles, playerParticlePoint.transform.position, playerParticlePoint.transform.rotation);
 
         healthbar.DrawHearts();
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("Test1Scene");
+            //actually have a deathmenu here
+        }
     }
 }

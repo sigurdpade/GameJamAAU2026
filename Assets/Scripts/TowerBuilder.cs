@@ -67,6 +67,7 @@ public class TowerBuilder : MonoBehaviour
         //build the tower at the plot
         Instantiate(selectedTowerScriptable.towerObject, selectedPlot.transform.position, selectedPlot.transform.rotation);
         SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
+        LearningPopUp.instance.TryShowInfo(selectedTowerScriptable.learningInformation, selectedTowerScriptable.name);
 
         selectedTower.GetComponent<Image>().color = Color.white;
         selectedTower = null;

@@ -5,6 +5,7 @@ public class TouchClickManager : MonoBehaviour
 {
     private Vector2 lastPointerPosition;
     public LayerMask clickableLayer;
+    public GameObject selectedTower;
 
     public void OnPosition(InputAction.CallbackContext context)
     {
@@ -26,5 +27,18 @@ public class TouchClickManager : MonoBehaviour
         {
             hit.collider.GetComponent<ClickableObject>()?.OnClicked();
         }
+    }
+
+    public void DeselectTower()
+    {
+        selectedTower.GetComponent<SpriteRenderer>().color = Color.white;
+        selectedTower.GetComponent<TowerBehavior>().rangeIndicator.SetActive(false);
+    }
+
+    public void SelectTower(GameObject tower)
+    {
+        selectedTower = tower;
+        selectedTower.GetComponent<SpriteRenderer>().color = Color.red;
+        selectedTower.GetComponent<TowerBehavior>().rangeIndicator.SetActive(true);
     }
 }

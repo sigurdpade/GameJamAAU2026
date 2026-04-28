@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2141cc45c21964c9884cc194b18092, type: 3}
   m_Name: Printer1
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  towerName: Printer Level 1
+  towerName: Printer
   towerSprite: {fileID: 21300000, guid: e4abb62e35781c44bbe7ebab4e688b00, type: 3}
   towerObject: {fileID: 5080224513412701615, guid: a6ceb232a3997ad4fa88c6a5b30d932b, type: 3}
   cost: 50
+  learningInformation:
+    name: Printer
+    description: The Printer prints consent forms and guidelines. Teaches AI-addicts
+      that they should not agree to terms and conditions without reading it first.
+      Fatal weapon.

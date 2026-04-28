@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2141cc45c21964c9884cc194b18092, type: 3}
   m_Name: Dommer1
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  towerName: Dommer Level 1
+  towerName: Judge
   towerSprite: {fileID: 21300000, guid: c6359a555da12cf46af7be156a137ed0, type: 3}
   towerObject: {fileID: 5080224513412701615, guid: de1cb92ead609ad4bb9e4ef827641cf2, type: 3}
   cost: 100
+  learningInformation:
+    name: Judge
+    description: The judge throws hammers, sending the AI-identity thieves to jail.
+      The judge is an incredibly important weapon, needed to keep harmony in society.

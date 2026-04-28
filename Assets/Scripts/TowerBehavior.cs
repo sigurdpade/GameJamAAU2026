@@ -16,6 +16,24 @@ public class TowerBehavior : MonoBehaviour
     public float burstDelay = 0.2f;
 
     private bool inRange = false;
+    public float range = 1f;
+    public GameObject rangeIndicator;
+
+    private void Awake()
+    {
+        CircleCollider2D circleCollider = GetComponent<CircleCollider2D>();
+        if (circleCollider != null)
+        {
+            circleCollider.radius = range;
+        }
+
+        // Scale the first child to 2 times the range
+        if (transform.childCount > 0)
+        {
+            Transform child = transform.GetChild(0);
+            child.localScale = new Vector3(range * 2f, range * 2f, range * 2f);
+        }
+    }
 
     private void Start()
     {

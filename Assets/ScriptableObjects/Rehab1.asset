@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2141cc45c21964c9884cc194b18092, type: 3}
   m_Name: Rehab1
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  towerName: Rehab Level 1
+  towerName: HR
   towerSprite: {fileID: 21300000, guid: 9ada8d1ec4a715241ad3d210bc410bf8, type: 3}
   towerObject: {fileID: 5080224513412701615, guid: 7bcdd54ad025b4340a0206b0fdffda6a, type: 3}
   cost: 150
+  learningInformation:
+    name: HR
+    description: The HR building shoots envelopes at the most severly AI-corrupted
+      addicts, sending them to rehab. This building will help restore human-kind.
+      It helps people who are dependent on AI for making decisions and thinking for
+      them, which are the worst kind of AI-addicts.

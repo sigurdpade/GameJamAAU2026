@@ -7,4 +7,6 @@ public class Tower : ScriptableObject
     public Sprite towerSprite;
     public GameObject towerObject;
     public int cost;
+
+    public LearningInformation learningInformation;
 }
