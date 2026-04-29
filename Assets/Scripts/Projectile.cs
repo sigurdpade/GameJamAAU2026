@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-
+        
         return nearestEnemy;
     }
 

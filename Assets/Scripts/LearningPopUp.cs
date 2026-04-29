@@ -20,6 +20,8 @@ public class LearningPopUp : MonoBehaviour
     public TMP_Text infoName;
     public TMP_Text infoText;
 
+    public AudioClip textUpSound;
+
     //private HashSet<string> seenEnemies = new HashSet<string>();
     private HashSet<string> builtBuildings = new HashSet<string>();
 
@@ -47,6 +49,7 @@ public class LearningPopUp : MonoBehaviour
 
     public void ShowInformationBox(LearningInformation learningInformation)
     {
+        SoundManager.instance.PlayImportantSFX(textUpSound);
         infoName.text = learningInformation.name;
         infoText.text = learningInformation.description;
         PauseManager.instance.PauseTime();

@@ -109,7 +109,7 @@ MonoBehaviour:
   speed: 10
   damage: 25
   target: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 31ac1d0051fc2e34392fab93d6f22a87, type: 3}
+  hitSound: {fileID: 8300000, guid: 3a96f42a7797ae344b865147a56c6f9e, type: 3}
   hitParticle: {fileID: 3159535571779276687, guid: 94340abb9bbebe747b7f518dc8892932, type: 3}
 --- !u!50 &-2563184682253779054
 Rigidbody2D:

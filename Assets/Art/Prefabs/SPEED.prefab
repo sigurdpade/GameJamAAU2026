@@ -177,10 +177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 2720868687986032504}
   enemyId: 7
-  speed: 4
+  speed: 6
   enemyType: {fileID: 5786451422871810934}
-  killReward: 10
-  health: 70
+  killReward: 20
+  health: 50
   isImmune: 0
   deathParticle: {fileID: 4667045805532871220, guid: b7327fdd343670040aa642a917d1a49b, type: 3}
   moneyParticle: {fileID: 2501569724640446890, guid: cf1716ab3d7b1c145a1a82d7a9d09da1, type: 3}

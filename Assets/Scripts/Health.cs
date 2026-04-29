@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     public Transform playerParticlePoint;
     public GameObject playerHitParticles;
 
+    public GameObject deathScreen;
+
     private void Start()
     {
         healthbar.DrawHearts();
@@ -27,8 +29,8 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("Test1Scene");
-            //actually have a deathmenu here
+            deathScreen.SetActive(true);
+            PauseManager.instance.PauseTime();
         }
     }
 }

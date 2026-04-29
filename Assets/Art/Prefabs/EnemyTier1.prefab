@@ -88,7 +88,7 @@ MonoBehaviour:
   enemyId: 1
   speed: 1
   enemyType: {fileID: 5786451422871810934}
-  killReward: 10
+  killReward: 5
   health: 50
   isImmune: 0
   deathParticle: {fileID: 4667045805532871220, guid: b7327fdd343670040aa642a917d1a49b, type: 3}

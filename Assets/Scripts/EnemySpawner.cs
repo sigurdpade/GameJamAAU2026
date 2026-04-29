@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
 
     public AudioClip changeLevelSFX;
+    public GameObject winScreen;
 
     void Start()
     {
@@ -79,6 +80,8 @@ public class EnemySpawner : MonoBehaviour
             level++;
         }
 
+        winScreen.SetActive(true);
+        PauseManager.instance.PauseTime();
         Debug.Log("All levels complete!");
     }
 

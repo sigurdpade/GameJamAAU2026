@@ -391,7 +391,7 @@ MonoBehaviour:
   fireRate: 1
   useBurst: 1
   burstCount: 5
-  burstDelay: 0.5
+  burstDelay: 0.75
   range: 4
   rangeIndicator: {fileID: 4782190078477879298}
 --- !u!58 &-6861824440254407639
