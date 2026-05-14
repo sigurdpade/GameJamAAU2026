@@ -11,6 +11,10 @@ public class TouchClickManager : MonoBehaviour
 
     public GameObject[] buyMenues;
 
+    public GameObject sellButton;
+    public GameObject sellButton2;
+    public GameObject sellButton3;
+
     public void OnPosition(InputAction.CallbackContext context)
     {
         lastPointerPosition = context.ReadValue<Vector2>();
@@ -60,6 +64,10 @@ public class TouchClickManager : MonoBehaviour
 
     public void ShowBuyMenu()
     {
+        sellButton.SetActive(selectedTower != null);
+        sellButton2.SetActive(selectedTower != null);
+        sellButton3.SetActive(selectedTower != null);
+
         for (int i = 0; i < buyMenues.Length; i++)
         {
             buyMenues[i].SetActive(false);

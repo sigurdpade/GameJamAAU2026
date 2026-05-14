@@ -22,6 +22,8 @@ public class TowerBehavior : MonoBehaviour
     public float range = 1f;
     public GameObject rangeIndicator;
 
+    public GameObject plot;
+
     private void Awake()
     {
         CircleCollider2D circleCollider = GetComponent<CircleCollider2D>();

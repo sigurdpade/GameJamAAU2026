@@ -9,6 +9,10 @@ public class TowerBuilder : MonoBehaviour
     private Tower selectedTowerScriptable;
     private GameObject selectedPlot;
 
+
+    public Tower tower;
+
+
     public int money;
 
     private TouchClickManager tcm;
@@ -26,7 +30,27 @@ public class TowerBuilder : MonoBehaviour
     public void SelectTower(GameObject tower)
     {
         selectedTower = tower;
-        selectedTowerScriptable = selectedTower.GetComponent<TowerHolder>().tower;
+        if (selectedTower == null)
+    {
+    Debug.LogError("selectedTower is NULL");
+    return;
+    }
+
+    TowerHolder holder = selectedTower.GetComponent<TowerHolder>();
+
+    if (holder == null)
+    {
+        Debug.LogError("TowerHolder component missing on " + selectedTower.name);
+        return;
+    }
+
+    if (holder.tower == null)
+    {
+        Debug.LogError("tower field is NULL on " + selectedTower.name);
+        return;
+    }
+
+selectedTowerScriptable = holder.tower;
         selectedTower.GetComponent<Image>().color = Color.red;
         //effects to see selection
 
@@ -60,6 +84,48 @@ public class TowerBuilder : MonoBehaviour
         }
     }
 
+    public void SellTower()
+{
+    if (tcm.selectedTower == null)
+        return;
+
+    TowerBehavior tower = tcm.selectedTower.GetComponent<TowerBehavior>();
+
+    int sellAmount = 0;
+
+    // Decide refund amount based on tier
+    if (tower.towerTier == 1)
+        sellAmount = 50;
+
+    if (tower.towerTier == 2)
+        sellAmount = 100;
+
+    if (tower.towerTier == 3)
+        sellAmount = 150;
+
+    // Give money back
+    money += sellAmount;
+
+    // Reactivate plot
+    if (tower.plot != null)
+    {
+        tower.plot.SetActive(true);
+        tower.plot.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    // Destroy tower
+    Destroy(tcm.selectedTower);
+
+    // Clear selection
+    tcm.selectedTower = null;
+
+    // Update UI
+    tcm.ShowBuyMenu();
+    UpdateUI();
+}
+
+
+
     public void BuildTower(GameObject tower)
     {
         if (tcm.selectedTower != null)
@@ -78,9 +144,15 @@ public class TowerBuilder : MonoBehaviour
             money -= selectedTowerScriptable.cost;
 
             if (tcm.selectedTower.GetComponent<TowerBehavior>().towerTier == 1)
-                Instantiate(selectedTowerScriptable.towerObject2, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+            {
+                GameObject newTower1 = Instantiate(selectedTowerScriptable.towerObject2, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+                newTower1.GetComponent<TowerBehavior>().plot = tcm.selectedTower.GetComponent<TowerBehavior>().plot;
+            }
             if (tcm.selectedTower.GetComponent<TowerBehavior>().towerTier == 2)
-                Instantiate(selectedTowerScriptable.towerObject3, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+            {
+                GameObject newTower2 = Instantiate(selectedTowerScriptable.towerObject3, tcm.selectedTower.transform.position, tcm.selectedTower.transform.rotation);
+                newTower2.GetComponent<TowerBehavior>().plot = tcm.selectedTower.GetComponent<TowerBehavior>().plot;
+            }
 
             SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
             selectedTower.GetComponent<Image>().color = Color.white;
@@ -108,7 +180,9 @@ public class TowerBuilder : MonoBehaviour
         money -= selectedTowerScriptable.cost;
         
         //build the tower at the plot
-        Instantiate(selectedTowerScriptable.towerObject1, selectedPlot.transform.position, selectedPlot.transform.rotation);
+        GameObject newTower = Instantiate(selectedTowerScriptable.towerObject1, selectedPlot.transform.position, selectedPlot.transform.rotation);
+        newTower.GetComponent<TowerBehavior>().plot = selectedPlot;
+        
         SoundManager.instance.PlayImportantSFX(placeBuildingSFX);
         LearningPopUp.instance.TryShowInfo(selectedTowerScriptable.learningInformation, selectedTowerScriptable.name);
 

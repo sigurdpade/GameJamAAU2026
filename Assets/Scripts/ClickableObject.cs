@@ -30,5 +30,6 @@ public class ClickableObject : MonoBehaviour
 
             tcm.SelectTower(gameObject.GetComponentInParent<TowerBehavior>().gameObject);
         }
+        
     }
 }
