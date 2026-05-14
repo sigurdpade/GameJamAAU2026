@@ -41,37 +41,37 @@ public class ChainProjectile : MonoBehaviour
             HitTarget();
         }
     }
-void HitTarget()
-{
-    // Deal damage
-    Enemy enemy = currentTarget.GetComponent<Enemy>();
-    if (enemy != null)
+    void HitTarget()
     {
-        enemy.health -= damage;
-    }
-
-    bounceCount++;
-
-    Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, searchRadius);
-
-    Transform nextTarget = null;
-
-    foreach (Collider2D col in enemies)
-    {
-        if (col.CompareTag("Enemy") && col.transform != currentTarget)
+        // Deal damage
+        Enemy enemy = currentTarget.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            nextTarget = col.transform;
-            break;
+            enemy.health -= damage;
+        }
+
+        bounceCount++;
+
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, searchRadius);
+
+        Transform nextTarget = null;
+
+        foreach (Collider2D col in enemies)
+        {
+            if (col.CompareTag("Enemy") && col.transform != currentTarget)
+            {
+                nextTarget = col.transform;
+                break;
+            }
+        }
+
+        if (nextTarget != null && bounceCount < maxBounces)
+        {
+            currentTarget = nextTarget;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
-
-    if (nextTarget != null && bounceCount < maxBounces)
-    {
-        currentTarget = nextTarget;
-    }
-    else
-    {
-        Destroy(gameObject);
-    }
-}
 }
