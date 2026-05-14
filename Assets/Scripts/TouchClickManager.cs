@@ -31,11 +31,15 @@ public class TouchClickManager : MonoBehaviour
 
         if (hit.collider != null)
         {
+            TowerVirus virus = hit.collider.GetComponent<TowerVirus>();
+            if (virus != null)
+            {
+                virus.Click();
+                return;
+            }
+
             hit.collider.GetComponent<ClickableObject>()?.OnClicked();
-        } /*else
-        {
-            DeselectTower();
-        }*/
+        }
     }
 
     public void DeselectTower()
@@ -75,7 +79,7 @@ public class TouchClickManager : MonoBehaviour
         }
         buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].SetActive(true);
         buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(0).GetComponent<Image>().color = Color.darkOliveGreen;
-        if (selectedTower.GetComponent<TowerBehavior>().towerTier == 2)
+        if (selectedTower.GetComponent<TowerBehavior>().towerTier >= 2)
             buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(1).GetComponent<Image>().color = Color.darkOliveGreen;
         if (selectedTower.GetComponent<TowerBehavior>().towerTier == 3)
             buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(2).GetComponent<Image>().color = Color.darkOliveGreen;

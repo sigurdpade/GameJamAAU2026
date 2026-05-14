@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 3222927110250997439}
   m_Layer: 0
   m_Name: Printer1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,6 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852b4c72411c08c46b58445f1432f8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBehavior
+  towerType: 1
+  towerTier: 1
   projectilePrefab: {fileID: 3009681234406699702, guid: cfae7814cc4af7b4bb2c7c59a1e8a310, type: 3}
   firePoint: {fileID: 9095579292887599489}
   fireRate: 1

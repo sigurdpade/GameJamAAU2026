@@ -19,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
         public Enemy[] enemies;
 
         public AudioClip music;
+
+        public bool disableTowers = false;
     }
 
     [Header("Levels")]
@@ -51,6 +53,9 @@ public class EnemySpawner : MonoBehaviour
 
             SoundManager.instance.PlayImportantSFX(changeLevelSFX);
             yield return StartCoroutine(ShowLevelText("Level " + (level + 1)));
+
+            if (levels[level].disableTowers)
+                GameObject.Find("BossBattleTowerDisabler").GetComponent<TowerDisabler>().DisableRandomTowers();
 
             isSpawning = true;
             spawnCounter = levels[level].spawnInterval;

@@ -22,6 +22,8 @@ public class TowerBehavior : MonoBehaviour
     public float range = 1f;
     public GameObject rangeIndicator;
 
+    private Coroutine shootingCoroutine;
+
     private void Awake()
     {
         CircleCollider2D circleCollider = GetComponent<CircleCollider2D>();
@@ -40,18 +42,31 @@ public class TowerBehavior : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ShootingLoop());
+        shootingCoroutine = StartCoroutine(ShootingLoop());
+    }
+
+    private void OnEnable()
+    {
+        shootingCoroutine = StartCoroutine(ShootingLoop());
+    }
+
+    private void OnDisable()
+    {
+        if (shootingCoroutine != null)
+            StopCoroutine(shootingCoroutine);
     }
 
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        inRange = true;
+        if (other.CompareTag("Enemy"))
+            inRange = true;
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        inRange = false;
+        if(other.CompareTag("Enemy"))
+            inRange = false;
     }
 
     IEnumerator ShootingLoop()
@@ -86,6 +101,8 @@ public class TowerBehavior : MonoBehaviour
 
     void Shoot()
     {
+        if (!enabled) return;
+
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 }

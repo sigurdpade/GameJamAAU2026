@@ -10151,6 +10151,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8572520658847343270, guid: c8216951b55b71d4cbec5049394237c5, type: 3}
   m_PrefabInstance: {fileID: 1148536893}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1149641118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149641119}
+  - component: {fileID: 1149641120}
+  m_Layer: 0
+  m_Name: BossBattleTowerDisabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149641119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149641118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149641120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149641118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beca4b31496d6dd4ebe7ca40ab792622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerDisabler
+  virusPrefab: {fileID: 5080224513412701615, guid: 22026a97e9567d64dbc0987869a0709d, type: 3}
+  towersToDisable: 5
 --- !u!1 &1154280051
 GameObject:
   m_ObjectHideFlags: 0
@@ -19281,6 +19327,7 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
       weight: 20
     music: {fileID: 8300000, guid: 966b0855078e1c241942e96561fdeb1b, type: 3}
+    disableTowers: 0
   - spawnInterval: 1.5
     spawnDuration: 35
     enemies:
@@ -19293,6 +19340,7 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: ba7b9a02aaa129d48bcadcddae689549, type: 3}
       weight: 5
     music: {fileID: 0}
+    disableTowers: 0
   - spawnInterval: 0.65
     spawnDuration: 45
     enemies:
@@ -19305,6 +19353,7 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: 06c688ed941de1042933743958b3e39a, type: 3}
       weight: 15
     music: {fileID: 0}
+    disableTowers: 0
   - spawnInterval: 0.35
     spawnDuration: 100
     enemies:
@@ -19323,6 +19372,7 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: e2e8fb0b84ec6a549aa135d473a679f3, type: 3}
       weight: 2
     music: {fileID: 8300000, guid: f78c2899e68365e478d51f4298d62fdf, type: 3}
+    disableTowers: 1
   - spawnInterval: 0.25
     spawnDuration: 80
     enemies:
@@ -19345,6 +19395,7 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: e2e8fb0b84ec6a549aa135d473a679f3, type: 3}
       weight: 5
     music: {fileID: 0}
+    disableTowers: 1
   levelTextPanel: {fileID: 1707941883}
   levelText: {fileID: 1452536198}
   breakDuration: 5
@@ -25431,3 +25482,4 @@ SceneRoots:
   - {fileID: 2118319687}
   - {fileID: 433235633}
   - {fileID: 7348035817688098996}
+  - {fileID: 1149641119}
