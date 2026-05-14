@@ -19116,7 +19116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e14319c05056845a7e7e059bf533d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBuilder
-  money: 50
+  money: 200
   moneyText: {fileID: 633045239}
   placeBuildingSFX: {fileID: 8300000, guid: b1376b3eea137e74ab691d02519620a4, type: 3}
 --- !u!4 &2065349851

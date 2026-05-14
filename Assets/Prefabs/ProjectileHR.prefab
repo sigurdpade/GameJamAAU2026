@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6791618900111235014}
   - component: {fileID: 8932218760566422953}
-  - component: {fileID: 2077438913047520340}
   - component: {fileID: -2563184682253779054}
   - component: {fileID: 3604921078739240155}
+  - component: {fileID: 1630832135993636449}
   m_Layer: 0
   m_Name: ProjectileHR
   m_TagString: Untagged
@@ -94,23 +94,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &2077438913047520340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3009681234406699702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eede3c7e10ae7d4408dfd152c5117c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 10
-  damage: 25
-  target: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 3a96f42a7797ae344b865147a56c6f9e, type: 3}
-  hitParticle: {fileID: 3159535571779276687, guid: 94340abb9bbebe747b7f518dc8892932, type: 3}
 --- !u!50 &-2563184682253779054
 Rigidbody2D:
   serializedVersion: 5
@@ -184,3 +167,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1630832135993636449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009681234406699702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c4b28856a03ea45aa2d18f0523d40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainProjectile
+  speed: 8
+  maxBounces: 3
+  searchRadius: 5
+  damage: 10
