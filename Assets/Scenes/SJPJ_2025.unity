@@ -18164,6 +18164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTier1
       objectReference: {fileID: 0}
+    - target: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5032080415451022189, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
     - {fileID: 4803605098217757892, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
