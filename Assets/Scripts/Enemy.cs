@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
             {
                 moveTarget = GameManager.main.path[pathIndex];
             }
-
         }
 
         if (health <= 0)

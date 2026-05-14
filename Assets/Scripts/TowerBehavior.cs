@@ -30,11 +30,11 @@ public class TowerBehavior : MonoBehaviour
             circleCollider.radius = range;
         }
 
-        // Scale the first child to 2 times the range
+        // Scale the range indicator (first child) to 2 times the range.
         if (transform.childCount > 0)
         {
-            Transform child = transform.GetChild(0);
-            child.localScale = new Vector3(range * 2f, range * 2f, range * 2f);
+            Transform rangeIndicator = transform.GetChild(0);
+            rangeIndicator.localScale = new Vector3(range * 2f, range * 2f, range * 2f);
         }
     }
 
@@ -44,14 +44,20 @@ public class TowerBehavior : MonoBehaviour
     }
 
 
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        inRange = true;
+    public void OnTriggerStay2D(Collider2D range)
+    { 
+        if (range.CompareTag("Enemy") == true) //Addition: Checks if collider is an enemy.
+        {
+            inRange = true;
+        }
     }
 
-    public void OnTriggerExit2D(Collider2D other)
+    public void OnTriggerExit2D(Collider2D range)
     {
-        inRange = false;
+        if (range.CompareTag("Enemy") == true) //Addition: Checks if collider is an enemy.
+        {
+            inRange = false;
+        }
     }
 
     IEnumerator ShootingLoop()
