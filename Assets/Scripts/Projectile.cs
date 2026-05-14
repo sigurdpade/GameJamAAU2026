@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        target = FindNearestEnemy().transform;
+        target = FindNearestEnemy()?.transform;
     }
 
     public GameObject FindNearestEnemy()
@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (enemies.Length == 0)
-            Destroy(gameObject);
+            return null;//TODO: Addition.
 
         GameObject nearestEnemy = null;
         float shortestDistance = Mathf.Infinity;
@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        if (target == null)
+        if (target == null || !target.gameObject.activeInHierarchy)//TODO: Addition.
         { 
             Destroy(gameObject);
             return;

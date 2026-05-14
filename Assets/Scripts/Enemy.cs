@@ -47,7 +47,8 @@ public class Enemy : MonoBehaviour
             {
                 GameObject.Find("GameManager").GetComponent<Health>().TakeDamage(1);
                 SoundManager.instance.PlaySFX(damagePlayerSound);
-                Destroy(gameObject);
+                EnemySpawner.main.EnemyDefeated();//TODO: Addition.
+                gameObject.SetActive(false);//TODO: Addition.
                 return;
             }
             else
@@ -63,7 +64,8 @@ public class Enemy : MonoBehaviour
             Instantiate(deathParticle, transform.position, transform.rotation);
             Transform playerParticlesPoint = GameObject.Find("PlayerParticlesPoint").transform;
             Instantiate(moneyParticle, playerParticlesPoint.transform.position, playerParticlesPoint.transform.rotation);
-            Destroy(gameObject);
+            EnemySpawner.main.EnemyDefeated();//TODO: Addition.
+            gameObject.SetActive(false);//TODO: Addition.
             return;
         }
     }

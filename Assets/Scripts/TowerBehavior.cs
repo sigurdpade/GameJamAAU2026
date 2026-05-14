@@ -46,7 +46,7 @@ public class TowerBehavior : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D range)
     { 
-        if (range.CompareTag("Enemy") == true) //Addition: Checks if collider is an enemy.
+        if (range.CompareTag("Enemy") == true) //TODO:Addition.
         {
             inRange = true;
         }
@@ -54,7 +54,7 @@ public class TowerBehavior : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D range)
     {
-        if (range.CompareTag("Enemy") == true) //Addition: Checks if collider is an enemy.
+        if (range.CompareTag("Enemy") == true) //TODO:Addition.
         {
             inRange = false;
         }
