@@ -10,11 +10,25 @@ public class Enemy : MonoBehaviour
     public string enemyId;
     [SerializeField] private float speed = 2f;
     [SerializeField] private GameObject enemyType;
+
+//my split enemy contribution
+    [Header("Split Enemy")]
+    [SerializeField] private bool canSplit = false;
+    [SerializeField] private GameObject splitEnemyPrefab;
+    [SerializeField] private int splitAmount = 2;
+    [SerializeField] private float splitOffset = 0.3f;
+
     public int killReward = 10;
     public int health = 100;
     public bool isImmune = false;
     private Transform moveTarget;
     private int pathIndex = 0;
+
+   public void SetPathIndex(int newPathIndex)
+    {
+        pathIndex = newPathIndex;
+        moveTarget = GameManager.main.path[pathIndex];
+    }
 
     [Header("Effects")]
     public GameObject deathParticle;
@@ -64,9 +78,34 @@ public class Enemy : MonoBehaviour
             Instantiate(deathParticle, transform.position, transform.rotation);
             Transform playerParticlesPoint = GameObject.Find("PlayerParticlesPoint").transform;
             Instantiate(moneyParticle, playerParticlesPoint.transform.position, playerParticlesPoint.transform.rotation);
+        
+        //my split enemy contribution
+
+
+            if (canSplit && splitEnemyPrefab != null)
+            {
+                for (int i = 0; i < splitAmount; i++)
+                {
+                    Vector3 spawnOffset = new Vector3(
+                        Random.Range(-splitOffset, splitOffset),
+                        Random.Range(-splitOffset, splitOffset),
+                        0f
+                    );
+
+                   GameObject spawnedEnemy = Instantiate(splitEnemyPrefab, transform.position + spawnOffset, Quaternion.identity);
+                    Enemy spawnedEnemyScript = spawnedEnemy.GetComponent<Enemy>();
+                    if (spawnedEnemyScript != null)
+                    {
+                        spawnedEnemyScript.SetPathIndex(pathIndex);
+                    }
+                }
+
+            }
+
             Destroy(gameObject);
             return;
         }
+    
     }
 
     private void FixedUpdate()

@@ -19280,6 +19280,8 @@ MonoBehaviour:
       weight: 80
     - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
       weight: 20
+    - prefab: {fileID: 5786451422871810934, guid: 2b7539d76533942d68615c4a7bd2a47a, type: 3}
+      weight: 100
     music: {fileID: 8300000, guid: 966b0855078e1c241942e96561fdeb1b, type: 3}
   - spawnInterval: 1.5
     spawnDuration: 35
@@ -19291,6 +19293,8 @@ MonoBehaviour:
     - prefab: {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
       weight: 15
     - prefab: {fileID: 5786451422871810934, guid: ba7b9a02aaa129d48bcadcddae689549, type: 3}
+      weight: 5
+    - prefab: {fileID: 5786451422871810934, guid: 2b7539d76533942d68615c4a7bd2a47a, type: 3}
       weight: 5
     music: {fileID: 0}
   - spawnInterval: 0.65
@@ -19304,6 +19308,8 @@ MonoBehaviour:
       weight: 10
     - prefab: {fileID: 5786451422871810934, guid: 06c688ed941de1042933743958b3e39a, type: 3}
       weight: 15
+    - prefab: {fileID: 5786451422871810934, guid: 2b7539d76533942d68615c4a7bd2a47a, type: 3}
+      weight: 10
     music: {fileID: 0}
   - spawnInterval: 0.35
     spawnDuration: 100
@@ -19322,7 +19328,31 @@ MonoBehaviour:
       weight: 10
     - prefab: {fileID: 5786451422871810934, guid: e2e8fb0b84ec6a549aa135d473a679f3, type: 3}
       weight: 2
+    - prefab: {fileID: 5786451422871810934, guid: 2b7539d76533942d68615c4a7bd2a47a, type: 3}
+      weight: 10
     music: {fileID: 8300000, guid: f78c2899e68365e478d51f4298d62fdf, type: 3}
+  - spawnInterval: 0.25
+    spawnDuration: 80
+    enemies:
+    - prefab: {fileID: 5786451422871810934, guid: 2cacd57298c646642b39ed59f8c0317e, type: 3}
+      weight: 15
+    - prefab: {fileID: 5786451422871810934, guid: 2afb542c274a94041a04c9161190e25b, type: 3}
+      weight: 25
+    - prefab: {fileID: 5786451422871810934, guid: 81f22202bb4baf74282554fae0193c0d, type: 3}
+      weight: 30
+    - prefab: {fileID: 5786451422871810934, guid: ba7b9a02aaa129d48bcadcddae689549, type: 3}
+      weight: 5
+    - prefab: {fileID: 5786451422871810934, guid: c9374e2fa7200814ea4681e582403f0b, type: 3}
+      weight: 10
+    - prefab: {fileID: 5786451422871810934, guid: 0491a0bd3cfb68d4eb2a11395fae18bc, type: 3}
+      weight: 10
+    - prefab: {fileID: 5786451422871810934, guid: 06c688ed941de1042933743958b3e39a, type: 3}
+      weight: 10
+    - prefab: {fileID: 5786451422871810934, guid: d068007f2927cda448a0dd8d12e99223, type: 3}
+      weight: 5
+    - prefab: {fileID: 5786451422871810934, guid: 2b7539d76533942d68615c4a7bd2a47a, type: 3}
+      weight: 15
+    music: {fileID: 0}
   - spawnInterval: 0.25
     spawnDuration: 80
     enemies:

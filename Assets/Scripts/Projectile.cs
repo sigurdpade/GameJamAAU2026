@@ -12,7 +12,16 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        target = FindNearestEnemy().transform;
+        GameObject nearestEnemy = FindNearestEnemy();
+
+        if (nearestEnemy != null)
+        {
+            target = nearestEnemy.transform;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public GameObject FindNearestEnemy()
