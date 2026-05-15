@@ -10,6 +10,11 @@ public class Projectile : MonoBehaviour
 
     public GameObject hitParticle;
 
+    [Header("AOE Settings")]
+    public bool useAOE = false;
+    public float aoeRadius = 2f;
+    public int aoeDamage = 10;
+
     private void Start()
     {
         target = FindNearestEnemy().transform;
@@ -72,9 +77,29 @@ public class Projectile : MonoBehaviour
                 {
                     enemy.health -= damage;
 
+                    enemy.FlashRed();
+
+                    if (useAOE)
+                    {
+                        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, aoeRadius);
+
+                        foreach (Collider2D hit in hits)
+                        {
+                            if (hit.CompareTag("Enemy"))
+                            {
+                                Enemy aoeEnemy = hit.GetComponent<Enemy>();
+
+                                if (aoeEnemy != null && aoeEnemy != enemy)
+                                {
+                                    aoeEnemy.health -= aoeDamage;
+                                    aoeEnemy.FlashRed();
+                                }
+                            }
+                        }
+                    }
+
                     SoundManager.instance.PlaySFX(hitSound, true);
 
-                    enemy.FlashRed();
                     Instantiate(hitParticle, collision.transform.position, collision.transform.rotation);
                 }
 
@@ -82,6 +107,7 @@ public class Projectile : MonoBehaviour
             }
         }
     }
+
     /*void HitTarget()
     {
         Enemy enemy = target.GetComponent<Enemy>();
@@ -102,4 +128,12 @@ public class Projectile : MonoBehaviour
         target = _target;
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        if (useAOE)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, aoeRadius);
+        }
+    }
 }
