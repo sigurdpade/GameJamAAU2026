@@ -106,14 +106,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eede3c7e10ae7d4408dfd152c5117c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 2
-  damage: 40
+  speed: 1
+  damage: 50
   target: {fileID: 0}
   hitSound: {fileID: 0}
-  hitParticle: {fileID: 3159535571779276687, guid: 94340abb9bbebe747b7f518dc8892932, type: 3}
+  hitParticle: {fileID: 3159535571779276687, guid: ea97d8a8b5f91784c9b7533290fa044c, type: 3}
   useAOE: 1
   aoeRadius: 2
-  aoeDamage: 20
+  aoeDamage: 25
 --- !u!50 &-2563184682253779054
 Rigidbody2D:
   serializedVersion: 5

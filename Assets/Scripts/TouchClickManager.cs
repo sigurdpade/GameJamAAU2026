@@ -63,9 +63,12 @@ public class TouchClickManager : MonoBehaviour
         for (int i = 0; i < buyMenues.Length; i++)
         {
             buyMenues[i].SetActive(false);
-            buyMenues[i].transform.GetChild(0).GetChild(0).GetComponent<Image>().color = Color.white;
-            buyMenues[i].transform.GetChild(0).GetChild(1).GetComponent<Image>().color = Color.white;
-            buyMenues[i].transform.GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
+
+            for (int j = 0; j < 3; j++)
+            {
+                buyMenues[i].transform.GetChild(0).GetChild(j).GetComponent<Image>().color = Color.white;
+                buyMenues[i].transform.GetChild(0).GetChild(j).GetComponent<Button>().interactable = true;
+            }
         }
 
         if (selectedTower == null)
@@ -73,11 +76,23 @@ public class TouchClickManager : MonoBehaviour
             buyMenues[0].SetActive(true);
             return;
         }
-        buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].SetActive(true);
-        buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(0).GetComponent<Image>().color = Color.darkOliveGreen;
-        if (selectedTower.GetComponent<TowerBehavior>().towerTier == 2)
-            buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(1).GetComponent<Image>().color = Color.darkOliveGreen;
-        if (selectedTower.GetComponent<TowerBehavior>().towerTier == 3)
-            buyMenues[selectedTower.GetComponent<TowerBehavior>().towerType].transform.GetChild(0).GetChild(2).GetComponent<Image>().color = Color.darkOliveGreen;
+
+        int type = selectedTower.GetComponent<TowerBehavior>().towerType;
+        int tier = selectedTower.GetComponent<TowerBehavior>().towerTier;
+
+        buyMenues[type].SetActive(true);
+
+        for (int i = 0; i < tier; i++)
+        {
+            Image image = buyMenues[type].transform.GetChild(0).GetChild(i).GetComponent<Image>();
+            Button button = buyMenues[type].transform.GetChild(0).GetChild(i).GetComponent<Button>();
+
+            if (i == tier - 1)
+                image.color = Color.darkOliveGreen;
+            else
+                image.color = Color.gray;
+
+            button.interactable = false;
+        }
     }
 }

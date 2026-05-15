@@ -388,10 +388,10 @@ MonoBehaviour:
   towerTier: 2
   projectilePrefab: {fileID: 3009681234406699702, guid: 20ca155fad6b41543af1c6660ee725f7, type: 3}
   firePoint: {fileID: 9095579292887599489}
-  fireRate: 1
+  fireRate: 3
   useBurst: 0
-  burstCount: 5
-  burstDelay: 0.75
+  burstCount: 1
+  burstDelay: 1
   range: 3
   rangeIndicator: {fileID: 4782190078477879298}
 --- !u!58 &-6861824440254407639
