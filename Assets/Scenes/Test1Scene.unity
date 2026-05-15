@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2388275451547121489, guid: 2f6be82fd002f1d46ac6e75d400e25d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4150,7 +4150,7 @@ MonoBehaviour:
         m_MethodName: SelectTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 638195090}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4207,7 +4207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d23935735c8e254d98e4a6fe3910f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerHolder
-  tower: {fileID: 0}
+  tower: {fileID: 11400000, guid: 53a9c127c2dacfd4eb4a230a93bb0bc8, type: 2}
 --- !u!1 &654908603
 GameObject:
   m_ObjectHideFlags: 0
@@ -12746,7 +12746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Bomb
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42c4100d1f2fc7b4d8810ca263c40e5b, type: 2}
   m_sharedMaterial: {fileID: 4405624045026392409, guid: 42c4100d1f2fc7b4d8810ca263c40e5b, type: 2}
@@ -13422,7 +13422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e14319c05056845a7e7e059bf533d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerBuilder
-  money: 50
+  money: 200
   moneyText: {fileID: 633045239}
   placeBuildingSFX: {fileID: 8300000, guid: b1376b3eea137e74ab691d02519620a4, type: 3}
 --- !u!4 &2065349851

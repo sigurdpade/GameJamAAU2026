@@ -34,6 +34,9 @@ public class TouchClickManager : MonoBehaviour
 
     public void DeselectTower()
     {
+        if (selectedTower == null)
+            return;
+
         selectedTower.GetComponent<SpriteRenderer>().color = Color.white;
         selectedTower.GetComponent<TowerBehavior>().rangeIndicator.SetActive(false);
     }

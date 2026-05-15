@@ -473,4 +473,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableObject
   plot: {fileID: 0}
-  towerBehavior: {fileID: 0}
+  towerBehavior: {fileID: 744128557963674350}
