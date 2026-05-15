@@ -93,8 +93,9 @@ public class EnemySpawner : MonoBehaviour
             }
 
             isSpawning = false;
-
-            yield return new WaitUntil(() => remainingEnemies == 0 || levels[level].spawnDuration + 10 <= 0f);
+            float levelEndTime = Time.time + 10f; // Messy fix in cases where remaining enemies doesn not properly hit 0.
+            
+            yield return new WaitUntil(() => remainingEnemies == 0 || Time.time >= levelEndTime);
             CleanUpSpawnList();
             yield return StartCoroutine(ShowLevelText("Next Wave Incoming"));
 
@@ -194,8 +195,6 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject enemy = currentSpawnList[spawnIndex];
 
-        enemy.transform.position = GameManager.main.startPoint.position;
-        enemy.transform.rotation = Quaternion.identity;
         enemy.SetActive(true);
 
         spawnIndex++;
